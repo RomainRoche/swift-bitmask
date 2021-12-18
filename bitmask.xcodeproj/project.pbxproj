@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7AC64B97276C84B900ADAEFD /* bitmask.docc in Sources */ = {isa = PBXBuildFile; fileRef = 7AC64B96276C84B900ADAEFD /* bitmask.docc */; };
-		7AC64B9D276C84B900ADAEFD /* bitmask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC64B92276C84B900ADAEFD /* bitmask.framework */; };
+		7AC64B9D276C84B900ADAEFD /* Bitmask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC64B92276C84B900ADAEFD /* Bitmask.framework */; };
 		7AC64BA2276C84B900ADAEFD /* bitmaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC64BA1276C84B900ADAEFD /* bitmaskTests.swift */; };
 		7AC64BA3276C84B900ADAEFD /* bitmask.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC64B95276C84B900ADAEFD /* bitmask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7AC64BAD276CAE8200ADAEFD /* Bitmask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC64BAC276CAE8200ADAEFD /* Bitmask.swift */; };
@@ -26,7 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7AC64B92276C84B900ADAEFD /* bitmask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = bitmask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC64B92276C84B900ADAEFD /* Bitmask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bitmask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC64B95276C84B900ADAEFD /* bitmask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bitmask.h; sourceTree = "<group>"; };
 		7AC64B96276C84B900ADAEFD /* bitmask.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = bitmask.docc; sourceTree = "<group>"; };
 		7AC64B9C276C84B900ADAEFD /* bitmaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bitmaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC64B9D276C84B900ADAEFD /* bitmask.framework in Frameworks */,
+				7AC64B9D276C84B900ADAEFD /* Bitmask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +66,7 @@
 		7AC64B93276C84B900ADAEFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7AC64B92276C84B900ADAEFD /* bitmask.framework */,
+				7AC64B92276C84B900ADAEFD /* Bitmask.framework */,
 				7AC64B9C276C84B900ADAEFD /* bitmaskTests.xctest */,
 			);
 			name = Products;
@@ -120,7 +120,7 @@
 			);
 			name = bitmask;
 			productName = bitmask;
-			productReference = 7AC64B92276C84B900ADAEFD /* bitmask.framework */;
+			productReference = 7AC64B92276C84B900ADAEFD /* Bitmask.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7AC64B9B276C84B900ADAEFD /* bitmaskTests */ = {
@@ -368,7 +368,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.rroche.bitmask;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Bitmask;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -398,7 +398,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.rroche.bitmask;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Bitmask;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
