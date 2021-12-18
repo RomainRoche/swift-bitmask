@@ -43,5 +43,25 @@ class bitmaskTests: XCTestCase {
         bitmask = bitmask | .second
         XCTAssert(bitmask.rawValue == 3)
     }
+    
+    func test_bitmask_and_none() throws {
+        var bitmask = Bitmask(with: TestEnum.first)
+        bitmask = bitmask & .none
+        XCTAssert(bitmask.rawValue == 0)
+    }
+    
+    func test_bitmask_and_not() throws {
+        var bitmask = Bitmask(with: TestEnum.first) | .third
+        XCTAssert(bitmask.rawValue == 0b00000101)
+        bitmask = bitmask &~ .third
+        XCTAssert(bitmask.rawValue == 0b00000001)
+    }
+    
+    func test_bitmask_and_bool() throws {
+        let bitmask = Bitmask(with: TestEnum.first) | .second
+        XCTAssert(bitmask &? .first == true)
+        XCTAssert(bitmask &? .second == true)
+        XCTAssert(bitmask &? .third == false)
+    }
 
 }

@@ -7,6 +7,9 @@
 
 import Foundation
 
+infix operator &~   : AdditionPrecedence
+infix operator &?   : AdditionPrecedence
+
 public struct Bitmask<Mask: Maskable> {
     
     // MARK: - private
@@ -23,32 +26,72 @@ public struct Bitmask<Mask: Maskable> {
         self.init(withRawValue: mask.rawValue)
     }
     
-    public static func & (
+}
+
+// MARK: - Bitmask to Bitmask operators
+
+public extension Bitmask {
+    
+    static func & (
         lhs: Self,
         rhs: Self
     ) -> Self where Mask.T: FixedWidthInteger {
         return Self.init(withRawValue: lhs.rawValue & rhs.rawValue)
     }
     
-    public static func | (
+    static func | (
         lhs: Self,
         rhs: Self
     ) -> Self where Mask.T: FixedWidthInteger {
         return Self.init(withRawValue: lhs.rawValue | rhs.rawValue)
     }
     
-    public static func & (
+    static func &~ (
+        lhs: Self,
+        rhs: Self
+    ) -> Self where Mask.T: FixedWidthInteger {
+        return Self.init(withRawValue: lhs.rawValue & ~rhs.rawValue)
+    }
+    
+    static func &? (
+        lhs: Self,
+        rhs: Self
+    ) -> Bool where Mask.T: FixedWidthInteger {
+        return lhs.rawValue & rhs.rawValue != 0
+    }
+    
+}
+
+// MARK: - Bitmask to Maskable operators
+
+public extension Bitmask {
+    
+    static func & (
         lhs: Self,
         rhs: Mask
     ) -> Self where Mask.T: FixedWidthInteger {
         return Self.init(withRawValue: lhs.rawValue & rhs.rawValue)
     }
     
-    public static func | (
+    static func | (
         lhs: Self,
         rhs: Mask
     ) -> Self where Mask.T: FixedWidthInteger {
         return Self.init(withRawValue: lhs.rawValue | rhs.rawValue)
+    }
+    
+    static func &~ (
+        lhs: Self,
+        rhs: Mask
+    ) -> Self where Mask.T: FixedWidthInteger {
+        return Self.init(withRawValue: lhs.rawValue & ~rhs.rawValue)
+    }
+    
+    static func &? (
+        lhs: Self,
+        rhs: Mask
+    ) -> Bool where Mask.T: FixedWidthInteger {
+        return lhs.rawValue & rhs.rawValue != 0
     }
     
 }
