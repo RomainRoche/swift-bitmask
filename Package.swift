@@ -3,17 +3,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftBitmask",
+    name: "Bitmask",
     platforms: [
         .iOS(.v11)
     ],
     products: [
-        .library(name: "SwiftBitmask", type: .dynamic, targets: ["SwiftBitmask"]),
+        .library(name: "Bitmask", type: .dynamic, targets: ["Bitmask"]),
     ],
     targets: [
         .target(
-            name: "bitmask",
-            path: "bitmask/"
+            name: "Bitmask",
+            path: "Bitmask/"
         )
     ]
 )

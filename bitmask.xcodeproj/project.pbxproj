@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7AC64B97276C84B900ADAEFD /* bitmask.docc in Sources */ = {isa = PBXBuildFile; fileRef = 7AC64B96276C84B900ADAEFD /* bitmask.docc */; };
-		7AC64B9D276C84B900ADAEFD /* SwiftBitmask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC64B92276C84B900ADAEFD /* SwiftBitmask.framework */; };
+		7AC64B9D276C84B900ADAEFD /* Bitmask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC64B92276C84B900ADAEFD /* Bitmask.framework */; };
 		7AC64BA2276C84B900ADAEFD /* bitmaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC64BA1276C84B900ADAEFD /* bitmaskTests.swift */; };
-		7AC64BA3276C84B900ADAEFD /* SwiftBitmask.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC64B95276C84B900ADAEFD /* SwiftBitmask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AC64BA3276C84B900ADAEFD /* Bitmask.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC64B95276C84B900ADAEFD /* Bitmask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7AC64BAD276CAE8200ADAEFD /* Bitmask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC64BAC276CAE8200ADAEFD /* Bitmask.swift */; };
 		7AC64BAF276DDEFB00ADAEFD /* Maskable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC64BAE276DDEFB00ADAEFD /* Maskable.swift */; };
 /* End PBXBuildFile section */
@@ -26,8 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7AC64B92276C84B900ADAEFD /* SwiftBitmask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftBitmask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AC64B95276C84B900ADAEFD /* SwiftBitmask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftBitmask.h; sourceTree = "<group>"; };
+		7AC64B92276C84B900ADAEFD /* Bitmask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bitmask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC64B95276C84B900ADAEFD /* Bitmask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bitmask.h; sourceTree = "<group>"; };
 		7AC64B96276C84B900ADAEFD /* bitmask.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = bitmask.docc; sourceTree = "<group>"; };
 		7AC64B9C276C84B900ADAEFD /* bitmaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bitmaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC64BA1276C84B900ADAEFD /* bitmaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitmaskTests.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC64B9D276C84B900ADAEFD /* SwiftBitmask.framework in Frameworks */,
+				7AC64B9D276C84B900ADAEFD /* Bitmask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				7AEBDE93277081F60058EC01 /* Package.swift */,
-				7AC64B94276C84B900ADAEFD /* bitmask */,
+				7AC64B94276C84B900ADAEFD /* Bitmask */,
 				7AC64BA0276C84B900ADAEFD /* bitmaskTests */,
 				7AC64B93276C84B900ADAEFD /* Products */,
 			);
@@ -68,20 +68,20 @@
 		7AC64B93276C84B900ADAEFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7AC64B92276C84B900ADAEFD /* SwiftBitmask.framework */,
+				7AC64B92276C84B900ADAEFD /* Bitmask.framework */,
 				7AC64B9C276C84B900ADAEFD /* bitmaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7AC64B94276C84B900ADAEFD /* bitmask */ = {
+		7AC64B94276C84B900ADAEFD /* Bitmask */ = {
 			isa = PBXGroup;
 			children = (
 				7AEBDE92277081940058EC01 /* sources */,
-				7AC64B95276C84B900ADAEFD /* SwiftBitmask.h */,
+				7AC64B95276C84B900ADAEFD /* Bitmask.h */,
 				7AC64B96276C84B900ADAEFD /* bitmask.docc */,
 			);
-			path = bitmask;
+			path = Bitmask;
 			sourceTree = "<group>";
 		};
 		7AC64BA0276C84B900ADAEFD /* bitmaskTests */ = {
@@ -108,16 +108,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC64BA3276C84B900ADAEFD /* SwiftBitmask.h in Headers */,
+				7AC64BA3276C84B900ADAEFD /* Bitmask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7AC64B91276C84B900ADAEFD /* SwiftBitmask */ = {
+		7AC64B91276C84B900ADAEFD /* Bitmask */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7AC64BA6276C84B900ADAEFD /* Build configuration list for PBXNativeTarget "SwiftBitmask" */;
+			buildConfigurationList = 7AC64BA6276C84B900ADAEFD /* Build configuration list for PBXNativeTarget "Bitmask" */;
 			buildPhases = (
 				7AC64B8D276C84B900ADAEFD /* Headers */,
 				7AC64B8E276C84B900ADAEFD /* Sources */,
@@ -128,9 +128,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftBitmask;
+			name = Bitmask;
 			productName = bitmask;
-			productReference = 7AC64B92276C84B900ADAEFD /* SwiftBitmask.framework */;
+			productReference = 7AC64B92276C84B900ADAEFD /* Bitmask.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7AC64B9B276C84B900ADAEFD /* bitmaskTests */ = {
@@ -182,7 +182,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7AC64B91276C84B900ADAEFD /* SwiftBitmask */,
+				7AC64B91276C84B900ADAEFD /* Bitmask */,
 				7AC64B9B276C84B900ADAEFD /* bitmaskTests */,
 			);
 		};
@@ -229,7 +229,7 @@
 /* Begin PBXTargetDependency section */
 		7AC64B9F276C84B900ADAEFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7AC64B91276C84B900ADAEFD /* SwiftBitmask */;
+			target = 7AC64B91276C84B900ADAEFD /* Bitmask */;
 			targetProxy = 7AC64B9E276C84B900ADAEFD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -378,7 +378,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.rroche.bitmask;
-				PRODUCT_NAME = SwiftBitmask;
+				PRODUCT_NAME = Bitmask;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -408,7 +408,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.rroche.bitmask;
-				PRODUCT_NAME = SwiftBitmask;
+				PRODUCT_NAME = Bitmask;
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -463,7 +463,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7AC64BA6276C84B900ADAEFD /* Build configuration list for PBXNativeTarget "SwiftBitmask" */ = {
+		7AC64BA6276C84B900ADAEFD /* Build configuration list for PBXNativeTarget "Bitmask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7AC64BA7276C84B900ADAEFD /* Debug */,
