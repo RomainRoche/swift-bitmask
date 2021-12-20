@@ -17,7 +17,7 @@ public struct Bitmask<Mask: Maskable> {
     // MARK: - public
     
     /// A helper to create an empty Bitmask.
-    public static var empty: Self {
+    public static var none: Self {
         return Self()
     }
     
