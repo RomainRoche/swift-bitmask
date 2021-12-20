@@ -18,14 +18,14 @@ public struct Bitmask<Mask: Maskable> {
     
     /// Init a `Bitmask` with a raw value.
     /// - Parameter rawValue: The raw value.
-    private init(withRawValue rawValue: Mask.T) {
+    private init(withRawValue rawValue: Mask.Value) {
         self.rawValue = rawValue
     }
     
     // MARK: - public
     
     /// The raw value of the bitmask.
-    public private(set) var rawValue: Mask.T
+    public private(set) var rawValue: Mask.Value
     
     /// Init a `Bitmask`.
     /// - Parameter mask: The `Mask` value.
@@ -44,7 +44,7 @@ public extension Bitmask {
     /// - Returns: A `Bitmask`.
     static prefix func ~ (
         lhs: Self
-    ) -> Self where Mask.T: FixedWidthInteger {
+    ) -> Self {
         return Self.init(withRawValue: ~lhs.rawValue)
     }
  
@@ -61,7 +61,7 @@ public extension Bitmask {
     static func & (
         lhs: Self,
         rhs: Self
-    ) -> Self where Mask.T: FixedWidthInteger {
+    ) -> Self {
         return Self.init(withRawValue: lhs.rawValue & rhs.rawValue)
     }
     
@@ -72,7 +72,7 @@ public extension Bitmask {
     static func | (
         lhs: Self,
         rhs: Self
-    ) -> Self where Mask.T: FixedWidthInteger {
+    ) -> Self {
         return Self.init(withRawValue: lhs.rawValue | rhs.rawValue)
     }
     
@@ -83,7 +83,7 @@ public extension Bitmask {
     static func &~ (
         lhs: Self,
         rhs: Self
-    ) -> Self where Mask.T: FixedWidthInteger {
+    ) -> Self {
         return Self.init(withRawValue: lhs.rawValue & ~rhs.rawValue)
     }
     
@@ -94,7 +94,7 @@ public extension Bitmask {
     static func &? (
         lhs: Self,
         rhs: Self
-    ) -> Bool where Mask.T: FixedWidthInteger {
+    ) -> Bool {
         return lhs.rawValue & rhs.rawValue != 0
     }
     
@@ -111,7 +111,7 @@ public extension Bitmask {
     static func & (
         lhs: Self,
         rhs: Mask
-    ) -> Self where Mask.T: FixedWidthInteger {
+    ) -> Self {
         return Self.init(withRawValue: lhs.rawValue & rhs.rawValue)
     }
     
@@ -122,7 +122,7 @@ public extension Bitmask {
     static func | (
         lhs: Self,
         rhs: Mask
-    ) -> Self where Mask.T: FixedWidthInteger {
+    ) -> Self {
         return Self.init(withRawValue: lhs.rawValue | rhs.rawValue)
     }
     
@@ -133,7 +133,7 @@ public extension Bitmask {
     static func &~ (
         lhs: Self,
         rhs: Mask
-    ) -> Self where Mask.T: FixedWidthInteger {
+    ) -> Self {
         return Self.init(withRawValue: lhs.rawValue & ~rhs.rawValue)
     }
     
@@ -144,7 +144,7 @@ public extension Bitmask {
     static func &? (
         lhs: Self,
         rhs: Mask
-    ) -> Bool where Mask.T: FixedWidthInteger {
+    ) -> Bool {
         return lhs.rawValue & rhs.rawValue != 0
     }
     
