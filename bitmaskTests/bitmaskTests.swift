@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import SwiftBitmask
+@testable import Bitmask
 
 class bitmaskTests: XCTestCase {
 

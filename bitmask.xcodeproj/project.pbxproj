@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7AC64B97276C84B900ADAEFD /* bitmask.docc in Sources */ = {isa = PBXBuildFile; fileRef = 7AC64B96276C84B900ADAEFD /* bitmask.docc */; };
+		7AC64B97276C84B900ADAEFD /* Bitmask.docc in Sources */ = {isa = PBXBuildFile; fileRef = 7AC64B96276C84B900ADAEFD /* Bitmask.docc */; };
 		7AC64B9D276C84B900ADAEFD /* Bitmask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC64B92276C84B900ADAEFD /* Bitmask.framework */; };
 		7AC64BA2276C84B900ADAEFD /* bitmaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC64BA1276C84B900ADAEFD /* bitmaskTests.swift */; };
 		7AC64BA3276C84B900ADAEFD /* Bitmask.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AC64B95276C84B900ADAEFD /* Bitmask.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		7AC64B92276C84B900ADAEFD /* Bitmask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bitmask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC64B95276C84B900ADAEFD /* Bitmask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bitmask.h; sourceTree = "<group>"; };
-		7AC64B96276C84B900ADAEFD /* bitmask.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = bitmask.docc; sourceTree = "<group>"; };
+		7AC64B96276C84B900ADAEFD /* Bitmask.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Bitmask.docc; sourceTree = "<group>"; };
 		7AC64B9C276C84B900ADAEFD /* bitmaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bitmaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC64BA1276C84B900ADAEFD /* bitmaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitmaskTests.swift; sourceTree = "<group>"; };
 		7AC64BAC276CAE8200ADAEFD /* Bitmask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitmask.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			children = (
 				7AEBDE92277081940058EC01 /* sources */,
 				7AC64B95276C84B900ADAEFD /* Bitmask.h */,
-				7AC64B96276C84B900ADAEFD /* bitmask.docc */,
+				7AC64B96276C84B900ADAEFD /* Bitmask.docc */,
 			);
 			path = Bitmask;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7AC64B8C276C84B900ADAEFD /* Build configuration list for PBXProject "bitmask" */;
+			buildConfigurationList = 7AC64B8C276C84B900ADAEFD /* Build configuration list for PBXProject "Bitmask" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -210,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AC64B97276C84B900ADAEFD /* bitmask.docc in Sources */,
+				7AC64B97276C84B900ADAEFD /* Bitmask.docc in Sources */,
 				7AC64BAF276DDEFB00ADAEFD /* Maskable.swift in Sources */,
 				7AC64BAD276CAE8200ADAEFD /* Bitmask.swift in Sources */,
 			);
@@ -454,7 +454,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7AC64B8C276C84B900ADAEFD /* Build configuration list for PBXProject "bitmask" */ = {
+		7AC64B8C276C84B900ADAEFD /* Build configuration list for PBXProject "Bitmask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7AC64BA4276C84B900ADAEFD /* Debug */,
