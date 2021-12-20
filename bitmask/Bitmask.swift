@@ -28,6 +28,18 @@ public struct Bitmask<Mask: Maskable> {
     
 }
 
+// MARK: - Bitmask unary operators
+
+public extension Bitmask {
+    
+    static prefix func ~ (
+        lhs: Self
+    ) -> Self where Mask.T: FixedWidthInteger {
+        return Self.init(withRawValue: ~lhs.rawValue)
+    }
+ 
+}
+
 // MARK: - Bitmask to Bitmask operators
 
 public extension Bitmask {
