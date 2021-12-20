@@ -14,14 +14,6 @@ infix operator &?   : AdditionPrecedence
 /// to it and handle *bitmask* operations.
 public struct Bitmask<Mask: Maskable> {
     
-    // MARK: - private
-    
-    /// Init a `Bitmask` with a raw value.
-    /// - Parameter rawValue: The raw value.
-    private init(withRawValue rawValue: Mask.Value) {
-        self.rawValue = rawValue
-    }
-    
     // MARK: - public
     
     /// The raw value of the bitmask.
@@ -31,6 +23,12 @@ public struct Bitmask<Mask: Maskable> {
     /// - Parameter mask: The `Mask` value.
     public init(with mask: Mask) {
         self.init(withRawValue: mask.rawValue)
+    }
+    
+    /// Init a `Bitmask` with a raw value.
+    /// - Parameter rawValue: The raw value.
+    public init(withRawValue rawValue: Mask.Value) {
+        self.rawValue = rawValue
     }
     
 }
