@@ -152,3 +152,18 @@ public extension Bitmask {
     }
     
 }
+
+extension Bitmask: Codable where Mask.Value: Codable {
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let raw: Mask.Value = try container.decode(Mask.Value.self)
+        self.init(withRawValue: raw)
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(self.rawValue)
+    }
+    
+}
