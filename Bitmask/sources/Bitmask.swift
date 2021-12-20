@@ -16,6 +16,11 @@ public struct Bitmask<Mask: Maskable> {
     
     // MARK: - public
     
+    /// A helper to create an empty Bitmask.
+    public static var empty: Self {
+        return Self()
+    }
+    
     /// The raw value of the bitmask.
     public private(set) var rawValue: Mask.Value
     
