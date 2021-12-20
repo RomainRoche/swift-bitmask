@@ -27,10 +27,54 @@ class bitmaskTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    // MARK: - General Bitmask operations
+    
     func test_bitmask_init() throws {
         let bitmask = Bitmask(with: TestEnum.second)
         XCTAssert(bitmask.rawValue == 2)
     }
+    
+    func test_bitmask_invert() throws {
+        var bitmask = Bitmask(with: TestEnum.second)
+        bitmask = ~bitmask
+        XCTAssert(bitmask.rawValue == ~0b10)
+    }
+    
+    // MARK: - Bitmask to Bitmask operators tests
+    
+    func test_bitmask_to_bitmask_and() throws {
+        var bitmask = Bitmask(with: TestEnum.first)
+        bitmask = bitmask & Bitmask(with: TestEnum.second)
+        XCTAssert(bitmask.rawValue == 0)
+    }
+    
+    func test_bitmask_to_bitmask_or() throws {
+        var bitmask = Bitmask(with: TestEnum.first)
+        bitmask = bitmask | Bitmask(with: TestEnum.second)
+        XCTAssert(bitmask.rawValue == 3)
+    }
+    
+    func test_bitmask_to_bitmask_and_none() throws {
+        var bitmask = Bitmask(with: TestEnum.first)
+        bitmask = bitmask & Bitmask(with: TestEnum.none)
+        XCTAssert(bitmask.rawValue == 0)
+    }
+    
+    func test_bitmask_to_bitmask_and_not() throws {
+        var bitmask = Bitmask(with: TestEnum.first) | Bitmask(with: TestEnum.third)
+        XCTAssert(bitmask.rawValue == 5)
+        bitmask = bitmask &~ Bitmask(with: TestEnum.third)
+        XCTAssert(bitmask.rawValue == 1)
+    }
+    
+    func test_bitmask_to_bitmask_and_bool() throws {
+        let bitmask = Bitmask(with: TestEnum.first) | Bitmask(with: TestEnum.second)
+        XCTAssert(bitmask &? Bitmask(with: TestEnum.first) == true)
+        XCTAssert(bitmask &? Bitmask(with: TestEnum.second) == true)
+        XCTAssert(bitmask &? Bitmask(with: TestEnum.third) == false)
+    }
+    
+    // MARK: - Bitmask to Maskable operators tests
     
     func test_bitmask_and() throws {
         var bitmask = Bitmask(with: TestEnum.first)
@@ -62,12 +106,6 @@ class bitmaskTests: XCTestCase {
         XCTAssert(bitmask &? .first == true)
         XCTAssert(bitmask &? .second == true)
         XCTAssert(bitmask &? .third == false)
-    }
-    
-    func test_bitmask_invert() throws {
-        var bitmask = Bitmask(with: TestEnum.second)
-        bitmask = ~bitmask
-        XCTAssert(bitmask.rawValue == ~0b00000010)
     }
     
 }
