@@ -8,7 +8,7 @@ let package = Package(
         .iOS(.v11)
     ],
     products: [
-        .library(name: "SwiftBitmask", type: .dynamic, targets: ["bitmask"]),
+        .library(name: "SwiftBitmask", type: .dynamic, targets: ["SwiftBitmask"]),
     ],
     targets: [
         .target(
