@@ -13,7 +13,7 @@ let package = Package(
     targets: [
         .target(
             name: "bitmask",
-            path: "bitmask/sources"
+            path: "bitmask/"
         )
     ]
 )
