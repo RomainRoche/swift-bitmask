@@ -10,18 +10,25 @@ import Foundation
 infix operator &~   : AdditionPrecedence
 infix operator &?   : AdditionPrecedence
 
+/// The `Bitmask` structure allows to store a `Maskable` value and apply bitwise operators
+/// to it and handle *bitmask* operations.
 public struct Bitmask<Mask: Maskable> {
     
     // MARK: - private
     
+    /// Init a `Bitmask` with a raw value.
+    /// - Parameter rawValue: The raw value.
     private init(withRawValue rawValue: Mask.T) {
         self.rawValue = rawValue
     }
     
     // MARK: - public
     
-    private(set) var rawValue: Mask.T
+    /// The raw value of the bitmask.
+    public private(set) var rawValue: Mask.T
     
+    /// Init a `Bitmask`.
+    /// - Parameter mask: The `Mask` value.
     public init(with mask: Mask) {
         self.init(withRawValue: mask.rawValue)
     }
@@ -32,6 +39,9 @@ public struct Bitmask<Mask: Maskable> {
 
 public extension Bitmask {
     
+    /// The bitwise `NOT` operator.
+    /// - Parameter lhs: The `Bitmask` on which the operator will apply.
+    /// - Returns: A `Bitmask`.
     static prefix func ~ (
         lhs: Self
     ) -> Self where Mask.T: FixedWidthInteger {
@@ -44,6 +54,10 @@ public extension Bitmask {
 
 public extension Bitmask {
     
+    /// The bitwise `&` operator.
+    /// - Parameter lhs: The left `Bitmask` on which the operator will apply.
+    /// - Parameter rhs: The right `Bitmask` on which the operator will apply.
+    /// - Returns: A `Bitmask`.
     static func & (
         lhs: Self,
         rhs: Self
@@ -51,6 +65,10 @@ public extension Bitmask {
         return Self.init(withRawValue: lhs.rawValue & rhs.rawValue)
     }
     
+    /// The bitwise `|` operator.
+    /// - Parameter lhs: The left `Bitmask` on which the operator will apply.
+    /// - Parameter rhs: The right `Bitmask` on which the operator will apply.
+    /// - Returns: A `Bitmask`.
     static func | (
         lhs: Self,
         rhs: Self
@@ -58,6 +76,10 @@ public extension Bitmask {
         return Self.init(withRawValue: lhs.rawValue | rhs.rawValue)
     }
     
+    /// The bitwise `&~` operator. This operator will *remove* `rhs` to `lhs`.
+    /// - Parameter lhs: The left `Bitmask` on which the operator will apply.
+    /// - Parameter rhs: The right `Bitmask` on which the operator will apply.
+    /// - Returns: A `Bitmask`.
     static func &~ (
         lhs: Self,
         rhs: Self
@@ -65,6 +87,10 @@ public extension Bitmask {
         return Self.init(withRawValue: lhs.rawValue & ~rhs.rawValue)
     }
     
+    /// The bitwise `&?` operator. This operator will test if `lhs` *contains* `rhs`.
+    /// - Parameter lhs: The left `Bitmask` on which the operator will apply.
+    /// - Parameter rhs: The right `Bitmask` on which the operator will apply.
+    /// - Returns: A `Bool`.
     static func &? (
         lhs: Self,
         rhs: Self
@@ -78,6 +104,10 @@ public extension Bitmask {
 
 public extension Bitmask {
     
+    /// The bitwise `&` operator.
+    /// - Parameter lhs: The left `Bitmask` on which the operator will apply.
+    /// - Parameter rhs: The right `Bitmask.Mask` on which the operator will apply.
+    /// - Returns: A `Bitmask`.
     static func & (
         lhs: Self,
         rhs: Mask
@@ -85,6 +115,10 @@ public extension Bitmask {
         return Self.init(withRawValue: lhs.rawValue & rhs.rawValue)
     }
     
+    /// The bitwise `|` operator.
+    /// - Parameter lhs: The left `Bitmask` on which the operator will apply.
+    /// - Parameter rhs: The right `Bitmask.Mask` on which the operator will apply.
+    /// - Returns: A `Bitmask`.
     static func | (
         lhs: Self,
         rhs: Mask
@@ -92,6 +126,10 @@ public extension Bitmask {
         return Self.init(withRawValue: lhs.rawValue | rhs.rawValue)
     }
     
+    /// The bitwise `&~` operator. This operator will *remove* `rhs` to `lhs`.
+    /// - Parameter lhs: The left `Bitmask` on which the operator will apply.
+    /// - Parameter rhs: The right `Bitmask.Mask` on which the operator will apply.
+    /// - Returns: A `Bitmask`.
     static func &~ (
         lhs: Self,
         rhs: Mask
@@ -99,6 +137,10 @@ public extension Bitmask {
         return Self.init(withRawValue: lhs.rawValue & ~rhs.rawValue)
     }
     
+    /// The bitwise `&?` operator. This operator will test if `lhs` *contains* `rhs`.
+    /// - Parameter lhs: The left `Bitmask` on which the operator will apply.
+    /// - Parameter rhs: The right `Bitmask.Mask` on which the operator will apply.
+    /// - Returns: A `Bool`.
     static func &? (
         lhs: Self,
         rhs: Mask
