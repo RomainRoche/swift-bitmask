@@ -31,6 +31,11 @@ public struct Bitmask<Mask: Maskable> {
         self.rawValue = rawValue
     }
     
+    /// Init an empty mask.
+    public init() {
+        self.rawValue = 0
+    }
+    
 }
 
 // MARK: - Bitmask unary operators
