@@ -11,6 +11,7 @@ import Foundation
 /// as a `Bitmask`.
 public protocol Maskable {
     associatedtype Value: FixedWidthInteger
+    /// The `FixedWidthInteger` raw value.
     var rawValue: Value { get }
 }
 
