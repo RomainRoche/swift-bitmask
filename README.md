@@ -42,7 +42,3 @@ Add this repository as a **Swift Package**.
 
 ``https://github.com/RomainRoche/swift-bitmask``
 
-### WIP
-
-- WIP
-
