@@ -4,7 +4,7 @@ This framework is an alternative to the native ``OptionSet`` structure. It is in
 
 ## Example
 
-```
+```swift
 
 import Bitmask
 
