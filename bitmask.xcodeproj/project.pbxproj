@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A6998D02771D35E00E2A4B8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7AC64B92276C84B900ADAEFD /* Bitmask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bitmask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC64B95276C84B900ADAEFD /* Bitmask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bitmask.h; sourceTree = "<group>"; };
 		7AC64B96276C84B900ADAEFD /* Bitmask.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Bitmask.docc; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		7AC64B88276C84B900ADAEFD = {
 			isa = PBXGroup;
 			children = (
+				7A6998D02771D35E00E2A4B8 /* README.md */,
 				7AEBDE93277081F60058EC01 /* Package.swift */,
 				7AC64B94276C84B900ADAEFD /* Bitmask */,
 				7AC64BA0276C84B900ADAEFD /* bitmaskTests */,
