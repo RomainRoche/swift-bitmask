@@ -90,7 +90,7 @@ class bitmaskTests: XCTestCase {
     
     func test_bitmask_and_none() throws {
         var bitmask = Bitmask(with: TestEnum.first)
-        bitmask = bitmask & .none
+        bitmask = bitmask & TestEnum.none
         XCTAssert(bitmask.rawValue == 0)
     }
     
