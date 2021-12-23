@@ -108,6 +108,20 @@ class bitmaskTests: XCTestCase {
         XCTAssert(bitmask &? .third == false)
     }
     
+    // MARK: - Bitmask equatable
+    
+    func test_bitmask_equatable_true() throws {
+        let mask0 = Bitmask(with: TestEnum.first) | .second
+        let mask1 = Bitmask(with: TestEnum.second) | .first
+        XCTAssert(mask0 == mask1)
+    }
+    
+    func test_bitmask_equatable_false() throws {
+        let mask0 = Bitmask(with: TestEnum.first) | .second
+        let mask1 = Bitmask(with: TestEnum.second) | .third
+        XCTAssert(mask0 != mask1)
+    }
+    
     // MARK: - Maskable operators
     
     func test_maskable_or() throws {

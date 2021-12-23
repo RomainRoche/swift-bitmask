@@ -172,3 +172,14 @@ extension Bitmask: Codable where Mask.Value: Codable {
     }
     
 }
+
+extension Bitmask: Equatable {
+
+    public static func == (
+        lhs: Self,
+        rhs: Self
+    ) -> Bool {
+        return lhs.rawValue == rhs.rawValue
+    }
+
+}
